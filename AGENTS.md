@@ -38,12 +38,12 @@ Must be updated when:
 #### Format
 Each decision must include:
 
-ID:  
-Date:  
-Status: Proposed / Approved / Deprecated  
-Context:  
-Decision:  
-Consequences:  
+ID:
+Date:
+Status: Proposed / Approved / Deprecated
+Context:
+Decision:
+Consequences:
 
 ---
 

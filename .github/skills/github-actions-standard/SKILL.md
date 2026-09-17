@@ -17,7 +17,7 @@ metadata:
 - Refactoring existing workflows to improve readability, reduce technical debt, follow GitHub Actions standards, improve performance, ensure immutability, or enhance security
 
 ## Scope Boundaries
-Envoke this skill for: 
+Envoke this skill for:
 - GitHub Workflow directory structure and naming conventions
 - Composite action design and implementation
 - Matrix strategy design and implementation
@@ -26,7 +26,7 @@ Envoke this skill for:
 - Concurrency and environment protection in the CI/CD pipeline
 - Readability, KISS, DRY, and YAGNI principle enforcement
 
-Do not use this skill for: 
+Do not use this skill for:
 - Framework-specific patterns or standards (use detailed IaC, frontend, backend, or other skills for that)
 - Specific language syntax or features (use detailed language-specific skills for that)
 - API design
@@ -60,7 +60,7 @@ Do not use this skill for:
 
 ## File Structure
 ### Project Structure
-- Follow consistent directory naming conventions for files and directories; workflows should be organized as follows: 
+- Follow consistent directory naming conventions for files and directories; workflows should be organized as follows:
   - `.github/workflows/` - For workflow YAML files
   - `.github/actions/` - For composite actions
   - `.github/scripts/` - For scripts used in workflows

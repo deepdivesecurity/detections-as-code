@@ -16,13 +16,13 @@ metadata:
 - Setting up linting, formatting, or type-checking rules
 
 ## Scope Boundaries
-Envoke this skill for: 
+Envoke this skill for:
 - Descriptive naming
 - Immutability defaults
 - Readability, KISS, DRY, and YAGNI principle enforcement
 - Error-handling expectations and code review
 
-Do not use this skill for: 
+Do not use this skill for:
 - Framework-specific patterns or standards (use detailed IaC, frontend, backend, or other skills for that)
 - Specific language syntax or features (use detailed language-specific skills for that)
 - API design

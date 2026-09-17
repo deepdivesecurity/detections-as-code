@@ -1,15 +1,15 @@
 name: CI
 
-on: 
-  pull_request: 
-    paths: 
+on:
+  pull_request:
+    paths:
       - "rules/**"
       - ".github/workflows/**"
-  
-  push: 
-    branches: 
+
+  push:
+    branches:
       - main
-    paths: 
+    paths:
       - "rules/**"
       - ".github/workflows/**"
 
@@ -18,7 +18,7 @@ on:
 permissions:
   contents: read
 
-concurrency: 
+concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
@@ -27,14 +27,14 @@ jobs:
     name: Schema & YAML Validation
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    permissions: 
+    permissions:
       contents: write
       pull-requests: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
-        with: 
+        with:
           fetch-depth: 0
 
       - name: Set up Python
@@ -51,14 +51,14 @@ jobs:
       - name: Detect changed rule files
         id: changed-files
         uses: tj-actions/changed-files@9426d40962ed5378910ee2e21d5f8c6fcbf2dd96 # v47.0.6
-        with: 
+        with:
           files: |
             rules/**/*.yml
             rules/**/*.yaml
           separator: "\n"
-      
+
       - name: Show changed files
-        env: 
+        env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
           for file in ${ALL_CHANGED_FILES}; do
@@ -67,7 +67,7 @@ jobs:
 
       - name: Validate YAML files
         if: steps.changed-files.outputs.any_changed == 'true'
-        env: 
+        env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
           for file in ${ALL_CHANGED_FILES}; do
@@ -150,19 +150,19 @@ jobs:
       #     title: 'Update Rules from Sigma Repository'
       #     body: |
       #       ## Automated Sigma Conversion
-            
+
       #       This PR contains updated rules converted from the latest Sigma rules repository.
-            
+
       #       ### Changes
       #       - Updated rules
       #       - Conversion date: ${{ github.event.repository.updated_at }}
       #       - Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-            
+
       #       ### Review Checklist
       #       - [ ] Review changed rules for accuracy
       #       - [ ] Verify new rules are properly formatted
       #       - [ ] Check for any failed conversions in workflow logs
-            
+
       #       ---
       #       *This PR was automatically created by the CI workflow.*
       #     reviewers: ${{ github.repository_owner }}
