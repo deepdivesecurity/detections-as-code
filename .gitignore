@@ -258,3 +258,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Converted Sigma rules
+converted_rules

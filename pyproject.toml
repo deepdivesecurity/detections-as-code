@@ -7,6 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "pysigma-backend-crowdstrike==3.0.0",
     "pysigma-backend-kusto==1.0.1",
+    "pysigma-backend-splunk==2.1.0",
     "sigma-cli==3.0.3",
     "yamllint==1.38.0",
 ]
