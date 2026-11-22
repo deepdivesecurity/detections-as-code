@@ -77,7 +77,7 @@ jobs:
 
       - name: Validate Sigma schema
         if: steps.changed-files.outputs.any_changed == 'true'
-        uses: SigmaHQ/sigma-rules-validator@66a5abe3fb6d13ac203ded42045580845c9c5534 # v1.0.0
+        uses: SigmaHQ/sigma-rules-validator@aa3561cf4c5b577330ce4ace97d363853624b29a # v1.1.0
         with:
           paths: |-
             ./rules
