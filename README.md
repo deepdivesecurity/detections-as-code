@@ -1,15 +1,35 @@
-# Detections-as-Code Starter
+<a id="readme-top"></a>
 
-## Badges
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <img src="./assets/images/logo.png" alt="Detections-as-Code Logo" width="160" height="160">
+
+  <h3 align="center">Detections-as-Code</h3>
+
+  <p align="center">
+    Detection-as-Code transpilation from Sigma -> SIEM rules
+    <br />
+    <a href="https://github.com/deepdivesecurity/detections-as-code/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    &middot;
+    <a href="https://github.com/deepdivesecurity/detections-as-code/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+  </p>
+</div>
 
 [![CI](https://github.com/deepdivesecurity/detections-as-code-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/deepdivesecurity/detections-as-code-starter/actions/workflows/ci.yml)
 [![Deploy Staging](https://github.com/deepdivesecurity/detections-as-code-starter/actions/workflows/deploy-staging.yml/badge.svg)](https://github.com/deepdivesecurity/detections-as-code-starter/actions/workflows/deploy-staging.yml)
 [![Deploy Production](https://github.com/deepdivesecurity/detections-as-code-starter/actions/workflows/deploy-production.yml/badge.svg)](https://github.com/deepdivesecurity/detections-as-code-starter/actions/workflows/deploy-production.yml)
 
-## About the Project
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
 Contains the GitHub Actions workflow for detection-as-code transpilation from Sigma -> SIEM rules.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
 ## Getting Started
+
 
 ### Prerequisites
 - TBD for CD flow
@@ -35,6 +55,8 @@ Contains the GitHub Actions workflow for detection-as-code transpilation from Si
    uv run pre-commit install
    ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Usage
 
 ### Converting Sigma rules with the CLI locally
@@ -47,14 +69,20 @@ Contains the GitHub Actions workflow for detection-as-code transpilation from Si
    sigma convert -t "splunk" "rules/cloud/okta/okta_user_account_locked_out.yml" -p "splunk_windows" > "converted_rules/okta/okta_user_account_locked_out"
    ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Roadmap
 
-- [ ] TBD
-
 See the [open issues](https://github.com/deepdivesecurity/detections-as-code-starter/issues) for a complete list of proposed features and known issues.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Additional Documentation/References
 - [SigmaHQ Sigma GitHub](https://github.com/sigmahq/sigma)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## License
 All Rights Reserved.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
